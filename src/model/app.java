@@ -1,3 +1,5 @@
+import lego.legoFactory;
+
 public class app {
     public static void main(String[] args) {
         // Crear un Lego

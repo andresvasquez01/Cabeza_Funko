@@ -8,4 +8,12 @@ public interface Toy {
     void setLegs(ToyPart createLegs);
 
     void setBackground(ToyPart createBackground);
+
+    ToyPart getHead();
+
+    ToyPart getBody();
+
+    ToyPart getLegs();
+    
+    ToyPart getBackground();
 }

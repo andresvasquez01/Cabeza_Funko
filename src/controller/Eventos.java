@@ -24,8 +24,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class Eventos implements ActionListener {
     Interfaz inter = new Interfaz();
-    ImagenFactory IF = new ImagenFactory();
-    
+    Lego IF = new Lego();
+
+    // Funko IF = new Funko();
     public Eventos(Interfaz inter) {
 		this.inter = inter;
                 this.inter.ButtonHeadIzq.addActionListener((ActionListener) this);
@@ -54,26 +55,26 @@ public class Eventos implements ActionListener {
         // Cambio de cabeza
         if(e.getSource().equals(this.inter.ButtonHeadIzq)) {
             inter.PanelFHead.removeAll();
-            JPanelImage head = new JPanelImage(inter.PanelFHead, IF.getImagen("head").returnPathIzq());
+            JPanelImage head = new JPanelImage(inter.PanelFHead, IF.getHead().returnPathIzq());
             inter.PanelFHead.add(head).repaint();
             inter.PanelFHead.revalidate();
         }
         if(e.getSource().equals(this.inter.ButtonHeadDer)) {
             inter.PanelFHead.removeAll();
-            JPanelImage head = new JPanelImage(inter.PanelFHead, IF.getImagen("head").returnPathDer());
+            JPanelImage head = new JPanelImage(inter.PanelFHead, IF.getHead().returnPathDer());
             inter.PanelFHead.add(head).repaint();
             inter.PanelFHead.revalidate();
         }
         // Cambio de cuerpo
         if(e.getSource().equals(this.inter.ButtonBodyIzq)) {
             inter.PanelFBody.removeAll();
-            JPanelImage body = new JPanelImage(inter.PanelFBody, IF.getImagen("body").returnPathIzq());
+            JPanelImage body = new JPanelImage(inter.PanelFBody, IF.getBody().returnPathIzq());
             inter.PanelFBody.add(body).repaint();
             inter.PanelFBody.revalidate();
         }
         if(e.getSource().equals(this.inter.ButtonBodyDer)) {
             inter.PanelFBody.removeAll();
-            JPanelImage body = new JPanelImage(inter.PanelFBody, IF.getImagen("body").returnPathDer());
+            JPanelImage body = new JPanelImage(inter.PanelFBody, IF.getBody().returnPathDer());
             inter.PanelFBody.add(body).repaint();
             inter.PanelFBody.revalidate();
         }
