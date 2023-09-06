@@ -25,7 +25,7 @@ public class FunkoBody implements ToyPart{
     }
 
     @Override
-    public String getPathRight() {
+    public String getPathRigth() {
         actual = (actual % totalImages) + 1;  // Increment and loop back if needed
         return imagePaths.get(String.valueOf(actual));
     }
